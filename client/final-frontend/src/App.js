@@ -1,23 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import axios from "axios";
 
 function App() {
+  const [mealData, setMealData] = useState(null);
+  const [calories, setCalories] = useState(2500);
+
+  async function getKetoMealPlan() {
+    try {
+      let payload = await axios.get(
+        `https://api.spoonacular.com/mealplanner/generate?apiKey=15723cdbceaf4152bada86c5f317e672&timeFrame=day&targetCalories=${calories}&diet=ketogenic`
+      );
+      setMealData(payload);
+      console.log(mealData);
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  async function getVeganMealPlan() {
+    try {
+      let payload = await axios.get(
+        `https://api.spoonacular.com/mealplanner/generate?apiKey=15723cdbceaf4152bada86c5f317e672&timeFrame=day&targetCalories=${calories}&diet=vegan`
+      );
+      setMealData(payload);
+      console.log(mealData);
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  async function getVegetarianMealPlan() {
+    try {
+      let payload = await axios.get(
+        `https://api.spoonacular.com/mealplanner/generate?apiKey=15723cdbceaf4152bada86c5f317e672&timeFrame=day&targetCalories=${calories}&diet=vegetarian`
+      );
+      setMealData(payload);
+      console.log(mealData);
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>MEAL PLANNER</h1>
+      <br />
+      <h2>Please select your type of diet</h2>
+
+      <button onClick={getKetoMealPlan}>GET KETO DAILY MEAL PLAN</button>
+      <button onClick={getVeganMealPlan}>GET VEGAN DAILY MEAL PLAN</button>
+      <button onClick={getVegetarianMealPlan}>
+        GET VEGETARIAN DAILY MEAL PLAN
+      </button>
+      <br />
     </div>
   );
 }
