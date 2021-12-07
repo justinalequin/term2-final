@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
+import MealList from "./components/MealList/MealList";
 
 function App() {
   const [mealData, setMealData] = useState(null);
@@ -49,26 +50,30 @@ function App() {
   return (
     <div className="App">
       <h1>MEAL PLANNER</h1>
-      <br />
-      <h2>Please enter your daily caloric goal</h2>
+      <hr />
+      <div className="top">
+        <br />
+        <h2>Please enter your daily caloric goal</h2>
 
-      <input
-        style={{ textAlign: "center" }}
-        type="number"
-        placeholder="Default is 2500 calories."
-        onChange={handleChange}
-      />
+        <input
+          style={{ textAlign: "center" }}
+          type="number"
+          placeholder="Default is 2500 calories."
+          onChange={handleChange}
+        />
 
-      <h2>Please select your type of diet</h2>
-      <div className="buttons">
-        <button onClick={getKetoMealPlan}>GET KETO DAILY MEAL PLAN</button>
-        <button onClick={getVeganMealPlan}>GET VEGAN DAILY MEAL PLAN</button>
-        <button onClick={getVegetarianMealPlan}>
-          GET VEGETARIAN DAILY MEAL PLAN
-        </button>
+        <h2>Please select your type of diet</h2>
+        <div className="buttons">
+          <button onClick={getKetoMealPlan}>GET KETO DAILY MEAL PLAN</button>
+          <button onClick={getVeganMealPlan}>GET VEGAN DAILY MEAL PLAN</button>
+          <button onClick={getVegetarianMealPlan}>
+            GET VEGETARIAN DAILY MEAL PLAN
+          </button>
+        </div>
       </div>
 
       <br />
+      <div>{mealData && <MealList mealData={mealData} />}</div>
     </div>
   );
 }
