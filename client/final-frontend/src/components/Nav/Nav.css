@@ -10,7 +10,7 @@
   font-family: monospace;
 }
 
-.menuOptions {
+.navOptions {
   display: flex;
   justify-content: center;
   background-color: #9dae88;

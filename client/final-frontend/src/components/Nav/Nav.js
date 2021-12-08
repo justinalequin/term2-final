@@ -6,7 +6,7 @@ function Nav() {
     <div className="navMain">
       <div className="navTitle">Diet App</div>
 
-      <div className="menuOptions">
+      <div className="navOptions">
         <a>Signup</a>
         <a>Signin</a>
         <a>Favorites</a>
