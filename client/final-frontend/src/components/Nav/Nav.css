@@ -1,0 +1,21 @@
+.navMain {
+}
+
+.navTitle {
+  margin: 25px;
+  font-size: 75px;
+  box-shadow: 2px 2px 2px 2px lightslategray;
+  text-shadow: 2px 2px black;
+  color: #9dae88;
+  font-family: monospace;
+}
+
+.menuOptions {
+  display: flex;
+  justify-content: center;
+  background-color: #9dae88;
+}
+
+a {
+  margin: 25px;
+}

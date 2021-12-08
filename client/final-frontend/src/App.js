@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 import MealList from "./components/MealList/MealList";
+import Nav from "./components/Nav/Nav";
 
 function App() {
   const [mealData, setMealData] = useState(null);
@@ -49,10 +50,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>MEAL PLANNER</h1>
+      <Nav></Nav>
+
       <hr />
       <div className="top">
-        //Create nav bar with LOGIN, SIGNUP, RANDOM MEAL, AND SEARCH BAR.
         <br />
         <h2>Please enter your daily caloric goal</h2>
         <input
