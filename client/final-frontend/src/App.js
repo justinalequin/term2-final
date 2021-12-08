@@ -52,16 +52,15 @@ function App() {
       <h1>MEAL PLANNER</h1>
       <hr />
       <div className="top">
+        //Create nav bar with LOGIN, SIGNUP, RANDOM MEAL, AND SEARCH BAR.
         <br />
         <h2>Please enter your daily caloric goal</h2>
-
         <input
           style={{ textAlign: "center" }}
           type="number"
           placeholder="Default is 2500 calories."
           onChange={handleChange}
         />
-
         <h2>Please select your type of diet</h2>
         <div className="buttons">
           <button onClick={getKetoMealPlan}>GET KETO DAILY MEAL PLAN</button>

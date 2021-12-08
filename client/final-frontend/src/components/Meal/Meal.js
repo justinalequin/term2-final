@@ -7,6 +7,7 @@ export default function Meal({ meal }) {
 
   useEffect(() => {
     try {
+      //Picture's request is returning undefined. Check again once the API KEY unlocks for the day.
       let payload = axios.get(
         `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=15723cdbceaf4152bada86c5f317e672&includeNutrition=false`
       );
