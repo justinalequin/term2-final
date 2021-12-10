@@ -9,7 +9,7 @@ import Nav from "./components/Nav/Nav";
 function App() {
   const [mealData, setMealData] = useState(null);
   const [calories, setCalories] = useState(2500);
-  const [diet, setDiet] = useState("");
+  const [diet, setDiet] = useState("ketogenic");
 
   async function getMealPlan() {
     try {
@@ -18,6 +18,7 @@ function App() {
       );
       setMealData(payload);
       console.log(mealData);
+      console.log(diet);
     } catch (e) {
       console.log(e);
     }
@@ -62,12 +63,12 @@ function App() {
       </div>
 
       <select className="dietList" name="dietList" onChange={onChangeValue}>
-          <option value="Ketogenic">Ketogenic</option> 
-        <option value="Vegetarian">Vegetarian</option>
-        <option value="Vegan">Vegetarian</option>
-        <option value="Paleo">Paleo</option>
-        <option value="Pescetarian">Pescetarian</option>
-        <option value="Primal">Primal</option>
+          <option value="Ketogenic">KETOGENIC</option> 
+        <option value="Vegetarian">VEGETARIAN</option>
+        <option value="Vegan">VEGAN</option>
+        <option value="Paleo">PALEO</option>
+        <option value="Pescetarian">PESCETARIAN</option>
+        <option value="Primal">PRIMAL</option>
       </select>
 
       <div className="buttons">

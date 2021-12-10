@@ -30,4 +30,13 @@ button {
   text-align: center;
   width: 50vw;
   align-self: center;
+  height: 50px;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.instructions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

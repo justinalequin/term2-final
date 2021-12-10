@@ -4,6 +4,8 @@ import "./Meal.css";
 
 export default function Meal({ meal }) {
   const [image, setImage] = useState("");
+  const [score, setScore] = useState("");
+  const [likes, setLikes] = useState("");
 
   useEffect(() => {
     fetchMealImage();
@@ -16,12 +18,16 @@ export default function Meal({ meal }) {
         `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=15723cdbceaf4152bada86c5f317e672&includeNutrition=false`
       );
 
-      console.log(payload.data.image);
+      console.log(payload.data);
       setImage(payload.data.image);
+      setScore(payload.data.spoonacularScore);
+      setLikes(payload.data.aggregateLikes);
     } catch (e) {
       console.log(e.message);
     }
   }
+
+  console.log(meal);
 
   return (
     <div>
@@ -30,6 +36,8 @@ export default function Meal({ meal }) {
       <ul className="instructions">
         <li>Prep time: {meal.readyInMinutes}</li>
         <li>Serving: {meal.servings}</li>
+        <li>Spoonacular Score: {score}</li>
+        <li>Likes: {likes}</li>
       </ul>
       <button>ADD TO FAVORITES</button>
       <button
