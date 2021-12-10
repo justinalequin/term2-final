@@ -25,3 +25,9 @@ button {
   padding-bottom: 25px;
   border-radius: 5px;
 }
+
+.dietList {
+  text-align: center;
+  width: 50vw;
+  align-self: center;
+}
