@@ -4,6 +4,8 @@ import "./App.css";
 import MealList from "./components/MealList/MealList";
 import Nav from "./components/Nav/Nav";
 
+//Get radio buttons to select only one option and switch on click. Create login and signup pages. Create favorite meals page.
+
 function App() {
   const [mealData, setMealData] = useState(null);
   const [calories, setCalories] = useState(2500);
@@ -48,6 +50,10 @@ function App() {
     setCalories(e.target.value);
   }
 
+  function onChangeValue(e) {
+    console.log(e.target.value);
+  }
+
   return (
     <div className="App">
       <Nav></Nav>
@@ -69,6 +75,12 @@ function App() {
           <button onClick={getVegetarianMealPlan}>
             GET VEGETARIAN DAILY MEAL PLAN
           </button>
+        </div>
+
+        <div onChange={onChangeValue}>
+          <input type="radio" value="vegetarian" name="Vegetarian" /> Vegetarian
+          <input type="radio" value="ketogenic" name="Ketogenic" /> Ketogeninc
+          <input type="radio" value="vegan" name="Vegan" /> Vegan
         </div>
       </div>
 
