@@ -4,8 +4,6 @@ import "./App.css";
 import MealList from "./components/MealList/MealList";
 import Nav from "./components/Nav/Nav";
 
-//Get radio buttons to select only one option and switch on click. Create login and signup pages. Create favorite meals page.
-
 function App() {
   const [mealData, setMealData] = useState(null);
   const [calories, setCalories] = useState(2500);
@@ -17,7 +15,6 @@ function App() {
         `https://api.spoonacular.com/mealplanner/generate?apiKey=15723cdbceaf4152bada86c5f317e672&timeFrame=day&targetCalories=${calories}&diet=${diet}`
       );
       setMealData(payload);
-      console.log(mealData);
       console.log(diet);
     } catch (e) {
       console.log(e);
@@ -29,7 +26,6 @@ function App() {
   }
 
   function onChangeValue(e) {
-    console.log(e.target.value);
     setDiet(e.target.value);
   }
 
