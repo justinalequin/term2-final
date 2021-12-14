@@ -41,18 +41,6 @@ function App() {
     setDiet(e.target.value);
   }
 
-  // function handleSubmit() {
-  //   try {
-  //     let payload = await axios.get(
-  //       `https://api.spoonacular.com/mealplanner/generate?apiKey=15723cdbceaf4152bada86c5f317e672&timeFrame=day&targetCalories=${calories}&diet=${diet}`
-  //     );
-  //     setMealData(payload);
-  //     console.log(mealData);
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // }
-
   return (
     <div className="App">
       <Router>
@@ -65,7 +53,7 @@ function App() {
           <input
             style={{ textAlign: "center" }}
             type="number"
-            placeholder="Default is 2500 calories."
+            placeholder="Default is 2500 cal"
             onChange={handleChange}
           />
           <h2>Please select your type of diet</h2>
