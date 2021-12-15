@@ -66,63 +66,71 @@ function CalCalc() {
   }
 
   return (
-    <Collapsible trigger="Click here to calculate BMR and daily caloic needs">
-      <div className="calCalcMain">
-        <h1>Calorie Calculator</h1>
+    <div className="main">
+      <Collapsible trigger="▼▼▼ Click here to calculate BMR and daily caloric needs ▼▼▼">
+        <div className="calCalcMain">
+          <h1>Calorie Calculator</h1>
 
-        <div onChange={handleGenderChange}>
-          <input type="radio" value="66" name="gender" /> Male
-          <input type="radio" value="655" name="gender" /> Female
+          <div onChange={handleGenderChange}>
+            <input type="radio" value="66" name="gender" /> Male
+            <input type="radio" value="655" name="gender" /> Female
+          </div>
+
+          <h3>Please enter your weight below.</h3>
+
+          <input
+            style={{ textAlign: "center" }}
+            type="number"
+            placeholder="Please enter your weight in lbs"
+            onChange={handleWeightChange}
+          />
+
+          <h3>Please enter your height below.</h3>
+
+          <input
+            style={{ textAlign: "center" }}
+            type="number"
+            placeholder="Please enter your height in inches"
+            onChange={handleHeightChange}
+          />
+
+          <h3>Please enter your age below.</h3>
+
+          <input
+            style={{ textAlign: "center" }}
+            type="number"
+            placeholder="Please enter your age"
+            onChange={handleAgeChange}
+          />
+
+          <h3>Please select your activity level below.</h3>
+
+          <select
+            className="activityLevel"
+            name="activityLevel"
+            onChange={handleActivityChange}
+          >
+             <option value="1.2">Little or No Exercise</option> 
+            <option value="1.375">Lightly Active</option>
+            <option value="1.55">Moderately Active</option>
+            <option value="1.725">Very Active</option>
+            <option value="1.9">Extra Active</option>
+          </select>
+          <br />
+
+          <button onClick={getBMR}>Get Daily Calories</button>
         </div>
-
-        <h3>Please enter your weight below.</h3>
-
-        <input
-          style={{ textAlign: "center" }}
-          type="number"
-          placeholder="Please enter your weight in lbs"
-          onChange={handleWeightChange}
-        />
-
-        <h3>Please enter your height below.</h3>
-
-        <input
-          style={{ textAlign: "center" }}
-          type="number"
-          placeholder="Please enter your height in inches"
-          onChange={handleHeightChange}
-        />
-
-        <h3>Please enter your age below.</h3>
-
-        <input
-          style={{ textAlign: "center" }}
-          type="number"
-          placeholder="Please enter your age"
-          onChange={handleAgeChange}
-        />
-
-        <h3>Please select your activity level below.</h3>
-
-        <select
-          className="activityLevel"
-          name="activityLevel"
-          onChange={handleActivityChange}
-        >
-           <option value="1.2">Little or No Exercise</option> 
-          <option value="1.375">Lightly Active</option>
-          <option value="1.55">Moderately Active</option>
-          <option value="1.725">Very Active</option>
-          <option value="1.9">Extra Active</option>
-        </select>
-
-        <button onClick={getBMR}>Get Daily Calories</button>
-
-        <h3>Basal Metabolic Rate (BMR): {bmr}</h3>
-        <h3>Daily Calories to Maintain: {dailyCals} </h3>
-        <p>For healthy weight loss, lower your daily calories by about 500.</p>
-      </div>
-    </Collapsible>
+        <div className="bottom">
+          <div className="calBox">
+            <h3>Basal Metabolic Rate (BMR): {bmr}</h3>
+            <h3>Daily Calories based on activity level: {dailyCals} </h3>
+            <p>
+              For healthy weight loss, lower your daily calories by about 500.
+            </p>
+          </div>
+        </div>
+      </Collapsible>
+    </div>
   );
 }
 
