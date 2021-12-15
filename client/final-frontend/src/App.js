@@ -9,6 +9,7 @@ import jwtDecode from "jwt-decode";
 import "./App.css";
 import MealList from "./components/MealList/MealList";
 import Nav from "./components/Nav/Nav";
+import CalCalc from "./components/calCalc/CalCalc";
 import ProtectedHome from "./components/ProtectedHome/ProtectedHome";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Profile from "./components/Profile/Profile";
@@ -47,6 +48,11 @@ function App() {
         <Nav></Nav>
 
         <hr />
+
+        <CalCalc></CalCalc>
+
+        <hr />
+
         <div className="top">
           <br />
           <h2>Please enter your daily caloric goal</h2>
