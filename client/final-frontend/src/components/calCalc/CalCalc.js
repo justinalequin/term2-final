@@ -67,7 +67,7 @@ function CalCalc() {
 
   return (
     <div className="main">
-      <Collapsible trigger="▼▼▼ Click here to calculate BMR and daily caloric needs ▼▼▼">
+      <Collapsible trigger="▼▼▼▼ Click here to calculate BMR and daily caloric needs ▼▼▼▼">
         <div className="calCalcMain">
           <h1>Calorie Calculator</h1>
 
