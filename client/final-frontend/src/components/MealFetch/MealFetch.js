@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Collapsible from "react-collapsible";
+import axios from "axios";
+import MealList from "../MealList/MealList";
 
 function MealFetch() {
   const [mealData, setMealData] = useState(null);
