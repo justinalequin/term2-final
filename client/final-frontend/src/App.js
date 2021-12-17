@@ -31,6 +31,10 @@ function App() {
         <hr />
 
         <MealFetch></MealFetch>
+        <Routes>
+          <Route path="/sign-up" element={<Signup />} />
+          <Route path="/sign-in" element={<Signin />} />
+        </Routes>
       </Router>
     </div>
   );
