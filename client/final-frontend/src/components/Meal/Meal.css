@@ -2,3 +2,30 @@ button {
   margin: 15px;
   background-color: lightgray;
 }
+
+h3 {
+  font-size: 15px;
+}
+
+.instructions {
+  margin-right: 25px;
+}
+
+li {
+}
+
+.mains {
+  width: 25vw;
+  border: solid white 5px;
+  border-radius: 3px;
+}
+
+img {
+  width: 20vw;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.titleContainer {
+  height: 25px;
+}

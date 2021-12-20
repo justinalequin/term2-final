@@ -1,0 +1,13 @@
+.top {
+  width: 70vw;
+  justify-self: center;
+  background-color: #9dae88;
+  box-shadow: black 3px 3px 3px;
+}
+
+.toptop {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}

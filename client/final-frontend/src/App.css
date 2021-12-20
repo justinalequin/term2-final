@@ -5,7 +5,11 @@
   flex-direction: column;
   margin-left: 25px;
   margin-right: 25px;
-  background-color: blanchedalmond;
+  background-color: lightgray;
+  border-radius: 3px;
+  box-shadow: gray 3px 3px 3px;
+  margin-top: 10px;
+  font-family: monospace;
 }
 
 .buttons {
@@ -15,10 +19,12 @@
 }
 
 button {
-  border: solid black 2px;
+  border: solid white 2px;
   border-radius: 5px;
   padding: 5px;
   background-color: #9dae88;
+  font-weight: bold;
+  color: gray;
 }
 
 .top {

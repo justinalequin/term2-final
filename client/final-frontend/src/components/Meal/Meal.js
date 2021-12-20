@@ -30,14 +30,16 @@ export default function Meal({ meal }) {
   console.log(meal);
 
   return (
-    <div>
-      <h1>{meal.title}</h1>
+    <div className="mains">
+      <div className="titleContainer">
+        {" "}
+        <h3>{meal.title}</h3>
+      </div>
+
       <img src={image} alt="recipe" />
       <ul className="instructions">
         <li>Prep time: {meal.readyInMinutes}</li>
         <li>Serving: {meal.servings}</li>
-        <li>Spoonacular Score: {score}</li>
-        <li>Likes: {likes}</li>
       </ul>
       <button>ADD TO FAVORITES</button>
       <button
