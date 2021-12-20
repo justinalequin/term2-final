@@ -9,14 +9,14 @@ function MealGen() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        boxShadow: "black 3px 3px 3px",
+        borderRadius: "3px",
       }}
     >
       <div
         style={{
           backgroundColor: "white",
           width: "75vw",
-          boxShadow: "black 3px 3px 3px",
+          borderRadius: "3px",
         }}
       >
         <CalCalc></CalCalc>
