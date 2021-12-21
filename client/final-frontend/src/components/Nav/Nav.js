@@ -19,7 +19,7 @@ function Nav({ user, setUser }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <Link to="/protected-home" className="navbar-brand" href="#">
+        <Link to="/" className="navbar-brand" href="#">
           <h1>Meal Plan App</h1>
         </Link>
         <div className="collapse navbar-collapse" id="navbarNav">
