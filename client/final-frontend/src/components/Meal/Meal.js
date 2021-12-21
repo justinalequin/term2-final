@@ -46,7 +46,8 @@ export default function Meal({ meal }) {
         type="button"
         onClick={(e) => {
           e.preventDefault();
-          window.location.href = meal.sourceUrl;
+
+          window.open(meal.sourceUrl, "_blank");
         }}
       >
         {" "}
