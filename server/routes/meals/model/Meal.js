@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+//add meal url
 
 const mealSchema = new mongoose.Schema(
   {
